@@ -11,8 +11,8 @@ environment:
 # - "C:\\SR"
 
 install:
- - "choco install -y ghc --version %GHCVER%"
  - "set PATH=C:\\msys64\\mingw64\\bin;C:\\msys64\\usr\\bin;%PATH%"
+ - "choco install -y ghc --version %GHCVER%"
  - "refreshenv"
  - "cabal --version"
  - "ghc   --version"
@@ -21,6 +21,6 @@ install:
 build: off
 
 test_script:
- - "autoreconf -i"
+ - bash -c "autoreconf -i"
  - "echo packages:. > cabal.project"
  - "cabal %CABOPTS% new-build -j1 all"
