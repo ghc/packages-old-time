@@ -12,8 +12,7 @@ environment:
 
 install:
  - "choco install -y ghc --version %GHCVER%"
- - "choco install -y msys2"
- - "set PATH=C:\\tools\\msys64\\usr\\bin;%PATH%"
+ - "set PATH=C:\\msys64\\mingw64\\bin;C:\\msys64\\usr\\bin;%PATH%"
  - "refreshenv"
  - "cabal --version"
  - "ghc   --version"
