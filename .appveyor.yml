@@ -16,5 +16,6 @@ install:
 build: off
 
 test_script:
- - "find C:\\msys64"
+ - "C:\\msys64\\usr\\bin\\autoreconf -i"
+ - bash -c "/msys64/usr/bin/autoreconf -i"
  - bash -c "autoreconf -i"
