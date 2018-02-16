@@ -17,7 +17,9 @@ build: off
 
 test_script:
 # - "C:\\msys64\\usr\\bin\\autoreconf -i"
+ - bash -c "set"
  - which ls
- - "find /msys64 -name autoreconf"
- - bash -c "/msys64/usr/bin/autoreconf -i"
+ - "find / -name autoreconf"
+ - which autoreconf
+ - bash -c "/usr/bin/autoreconf -i"
  - bash -c "autoreconf -i"
